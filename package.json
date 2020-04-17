@@ -5,15 +5,24 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
+    "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.2",
     "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.4",
     "ts-loader": "^7.0.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
@@ -22,6 +31,7 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "@babel/polyfill": "^7.8.7"
   }
 }
