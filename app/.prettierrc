@@ -1,6 +1,0 @@
-{
-  "singleQuote": true,
-  "parser": "typescript",
-  "printWidth": 80,
-  "trailingComma": "all"
-}
