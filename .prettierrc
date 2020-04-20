@@ -1,14 +1,7 @@
-/* 
-
-option 참조 : https://prettier.io/docs/en/options.html 
-
-*/
-
 {
   "trailingComma": "es5",
-  "tabWidth": 4, // tab 간격 스페이스 4칸
-  "semi": true, // 문장 끝에 ; 붙임
-  "singleQuote": true, // " 대신 ' 사용
+  "tabWidth": 4,
+  "singleQuote": true,
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "always"
