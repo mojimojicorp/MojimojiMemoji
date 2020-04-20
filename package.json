@@ -21,6 +21,7 @@
     "@types/react-dom": "^16.9.6",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
+    "prettier": "2.0.4",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.4",
     "ts-loader": "^7.0.0",
@@ -30,8 +31,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "@babel/polyfill": "^7.8.7"
+    "react-dom": "^16.13.1"
   }
 }
