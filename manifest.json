@@ -5,20 +5,14 @@
 
   "description": "나만의 메모를 할 수 있는 메모지 어플",
   "icons": {
-    "16": "images/icon16.png"
+    "16": "src/images/icon_64x64.png"
   },
-  "default_locale": "ko",
 
   "sidebar_action": {
     "default_page": "index.html",
     "default_icon": {
-      "16": "images/icon16.png"
+      "16": "src/images/icon_64x64.png"
     },
     "default_title": "모지모지 메모지"
-  },
-  "background": {
-    "scripts": [],
-    "persistent": false,
-    "permissions": ["downloads"]
   }
 }
