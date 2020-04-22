@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --open",
-        "build": "webpack -p",
+        "start": "webpack-dev-server --open --hot",
+        "build": "webpack --watch",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint src/**/*.{ts,tsx,js,jsx}",
         "lint:fix": "eslint --fix src/**/*.{ts,tsx,js,jsx}",
@@ -41,6 +41,8 @@
         "eslint-plugin-prettier": "3.1.3",
         "eslint-plugin-react": "7.19.0",
         "eslint-plugin-react-hooks": "3.0.0",
+        "html-loader": "^1.1.0",
+        "html-webpack-plugin": "^4.2.0",
         "prettier": "2.0.4",
         "prettier-eslint": "9.0.1",
         "prettier-eslint-cli": "5.0.0",
@@ -55,6 +57,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.8.7",
         "react": "^16.13.1",
-        "react-dom": "^16.13.1"
+        "react-dom": "^16.13.1",
+        "html-webpack-plugin": "^4.2.0"
     }
 }

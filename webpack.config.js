@@ -1,20 +1,24 @@
-const path = require("path");
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  devtool: "source-map",
+  mode: 'development',
+  watch: true,
   devServer: {
-    host: "localhost",
+    inline: true,
+    hot: true,
+    host: 'localhost',
+    contentBase: path.resolve(__dirname, 'dist'),
+    index: 'index.html',
     port: 3000,
   },
-  context: path.join(__dirname, "src"),
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js'],
   },
-  entry: ["@babel/polyfill", "./index.tsx"],
+  entry: ['@babel/polyfill', './src/index.tsx'],
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -23,10 +27,10 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
           },
         ],
       },
@@ -35,19 +39,30 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
         ],
       },
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, "./src"),
-        loader: ["style-loader", "css-loader"],
+        include: path.resolve(__dirname, './src'),
+        loader: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
     ],
   },
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
-  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+    }),
+  ],
 };
