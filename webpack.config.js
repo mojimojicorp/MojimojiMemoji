@@ -23,6 +23,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
         use: [
