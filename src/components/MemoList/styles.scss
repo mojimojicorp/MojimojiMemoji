@@ -11,7 +11,7 @@
   .memo {
     display: grid;
     grid-template-rows: 3fr 1fr;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 20fr 0.5fr;
 
     width: calc(100% - 2rem);
     height: 130px;
@@ -32,7 +32,8 @@
     }
 
     .date {
-      grid-column-start: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
       justify-self: end;
       align-self: center;
       font-size: 16px;
