@@ -1,0 +1,43 @@
+.memoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 30px 25px;
+
+  background-color: #ffffff;
+
+  .memo {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 20fr 0.5fr;
+
+    width: calc(100% - 2rem);
+    height: 130px;
+    padding: 1rem;
+    margin-bottom: 32px;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+    background: #fff1a6;
+
+    img {
+      justify-self: end;
+    }
+
+    .text {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .date {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      justify-self: end;
+      align-self: center;
+      font-size: 16px;
+      color: #535353;
+    }
+  }
+}
