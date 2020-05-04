@@ -11,6 +11,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     index: 'index.html',
     port: 3000,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
