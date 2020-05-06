@@ -1,16 +1,19 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
+
 import styles from './styles.scss';
-import Header from '../../components/Header';
-import FolderList from '../../components/FolderList';
-import MemoList from '../../components/MemoList';
+import LoginPage from '../LoginPage';
+import FolderListPage from '../FolderListPage';
+import MemoListPage from '../MemoListPage';
+import MemoEditPage from '../MemoEditPage';
 
 const App = () => {
   return (
     <div className={styles.App}>
-      <Route path="/" component={Header} />
-      <Route path="/folderList" component={FolderList} />
-      <Route path="/memoList" component={MemoList} />
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/folderList" component={FolderListPage} />
+      <Route path="/memoList" component={MemoListPage} />
+      <Route path="/memoEdit" component={MemoEditPage} />
     </div>
   );
 };
