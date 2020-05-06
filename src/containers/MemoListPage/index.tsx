@@ -25,6 +25,11 @@ const MemoListPage = () => {
           <img src={moreBtn} alt="" />
           <div className={styles.date}>작성일 YYYY-MM-DD</div>
         </div>
+
+        <div className={styles.addMemoBtn}>
+          <div className={styles.add} />
+          메모 추가
+        </div>
       </div>
     </>
   );

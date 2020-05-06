@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './styles.scss';
 import FolderListPage from '../FolderListPage';
 import MemoListPage from '../MemoListPage';
+import MemoEditPage from '../MemoEditPage';
 
 const App = () => {
   return (
