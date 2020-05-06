@@ -1,15 +1,15 @@
 import * as React from 'react';
 import styles from './styles.scss';
-import Header from '../../components/Header';
-import FolderList from '../../components/FolderList';
-import MemoList from '../../components/MemoList';
+import FolderListPage from '../FolderListPage';
+import MemoListPage from '../MemoListPage';
 
 const App = () => {
-  return <div className={styles.App}>
-    <Header />
-    {/* <FolderList /> */}
-    <MemoList />
-         </div>;
+  return (
+    <div className={styles.App}>
+      <FolderListPage />
+      <MemoListPage />
+    </div>
+  );
 };
 
 export default App;
