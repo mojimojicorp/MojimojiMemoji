@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.scss';
 import moreBtn from '../../images/body/more_btn.png';
 
-const MemoList = () => {
+const MemoListPage = () => {
   return (
     <div className={styles.memoList}>
       <div className={styles.memo}>
@@ -26,4 +26,4 @@ const MemoList = () => {
   );
 };
 
-export default MemoList;
+export default MemoListPage;

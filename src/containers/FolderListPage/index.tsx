@@ -3,7 +3,7 @@ import styles from './styles.scss';
 import folder from '../../images/body/folder_btn.png';
 import addBtn from '../../images/body/add_btn.png';
 
-const FolderList = () => {
+const FolderListPage = () => {
   return (
     <div className={styles.folderList}>
       <div className={styles.folder}>
@@ -33,4 +33,4 @@ const FolderList = () => {
   );
 };
 
-export default FolderList;
+export default FolderListPage;
