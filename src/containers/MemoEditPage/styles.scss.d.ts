@@ -7,9 +7,12 @@ interface CssExports {
   'edit_area': string;
   'edit_container': string;
   'folder': string;
+  'image': string;
   'italic': string;
+  'link': string;
   'logo': string;
   'removeline': string;
+  'table': string;
   'toolbar': string;
   'underline': string;
 }

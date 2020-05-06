@@ -24,60 +24,102 @@
   
     .bold {
       width: 13px;
-      img {
-        width: 100%;
-      }
+      height: 15px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -340px -122px;
     }
   
     .italic {
-      padding-bottom: 1px;
       width: 13px;
-      img {
-        width: 100%;
-        opacity: 54%;
-      }
+      height: 15px; 
+
+      background-image: url(../../images/icons.png);
+      background-position: -340px -87px;
+      opacity: 54%;
     }
   
     .underline {
-      margin-top: 7px;
       width: 13px;
-      img {
-        width: 100%;
-        opacity: 54%;
-      }
+      height: 16px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -300px -36px;
+      background-size: 325px 240px;
+      opacity: 54%;
     }
   
     .removeline {
-      width: 18px;
-      img {
-        width: 100%;
-      }
+      width: 16px;
+      height: 16px;
+      
+      background-image: url(../../images/icons.png);
+      background-position: -216px -164px;
+      background-size: 285px 230px;
     }
   
     .divider {
-      width: 1px;
+      width: 2px;
+      height: 20px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -340px -157px;
+
       cursor: none;
     }
   
     .align {
-      margin-left: 10px;
-      margin-right: 10px;
+      width: 15px;
+      height: 15px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -300px -8px;
+      background-size: 325px 240px;
     }
+
+    .link {
+      width: 25px;
+      height: 14px;
   
+      background-image: url(../../images/icons.png);
+      background-position: -46px -455px;
+      background-size: 325px 240px;
+    }
+
+    .image {
+      width: 19px;
+      height: 19px;
+    
+      background-image: url(../../images/icons.png);
+      background-position: -245px -138px;
+      background-size: 325px 240px;
+    }
+
+    .table {
+      width: 22px;
+      height: 19px;
+      
+      background-image: url(../../images/icons.png);
+      background-position: -10px -271px;
+      background-size: 358px 300px;
+    }
+
     .logo {
       width: 25px;
-  
-      img {
-        width: 100%;
-      }
+      height: 25px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -68px -62px;
+      background-size: 130px 110px;
     }
   
     .folder {
       width: 25px;
-  
-      img {
-        width: 100%;
-      }
+      height: 25px;
+
+      background-image: url(../../images/icons.png);
+      background-position: 0px -1px;
+      background-size: 58px 50px;
     }
   }
   
