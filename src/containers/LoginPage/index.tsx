@@ -7,14 +7,16 @@ import naverLoginBtn from '../../images/body/naverLogin_btn.png';
 const LoginPage = () => {
   return (
     <div className={styles.background}>
-      <div className={styles.logo}>
-        <img src={logo} alt="" />
-      </div>
-      <div className={styles.title}>
-        <span>모지모지 메모지</span>
-      </div>
-      <div className={styles.login_btn}>
-        <img src={naverLoginBtn} alt="" />
+      <div className={styles.content}>
+        <div className={styles.logo}>
+          <img src={logo} alt="" />
+        </div>
+        <div className={styles.title}>
+          <span>모지모지 메모지</span>
+        </div>
+        <div className={styles.login_btn}>
+          <img src={naverLoginBtn} alt="" />
+        </div>
       </div>
     </div>
   );
