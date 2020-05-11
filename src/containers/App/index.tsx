@@ -11,9 +11,9 @@ const App = () => {
   return (
     <div className={styles.App}>
       <Route exact path="/" component={LoginPage} />
-      <Route path="/folderList" component={FolderListPage} />
-      <Route path="/memoList" component={MemoListPage} />
-      <Route path="/memoEdit" component={MemoEditPage} />
+      <Route path="/folder-list" component={FolderListPage} />
+      <Route path="/memo-list" component={MemoListPage} />
+      <Route path="/memo-edit" component={MemoEditPage} />
     </div>
   );
 };
