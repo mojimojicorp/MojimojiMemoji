@@ -9,9 +9,8 @@
   background-color: #ffffff;
 
   .memo {
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-template-columns: 20fr 0.5fr;
+    display: flex;
+    flex-direction: column;
 
     width: calc(100% - 2rem);
     height: 130px;
@@ -22,20 +21,14 @@
     border-radius: 2px;
     background: #fff1a6;
 
-    img {
-      justify-self: end;
-    }
-
     .text {
+      height: 82%;
       font-size: 16px;
       color: #000000;
     }
 
     .date {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      justify-self: end;
-      align-self: center;
+      align-self: flex-end;
       font-size: 16px;
       color: #535353;
     }

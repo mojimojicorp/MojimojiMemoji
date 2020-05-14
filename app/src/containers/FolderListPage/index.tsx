@@ -3,11 +3,14 @@ import styles from './styles.scss';
 import folder from '../../images/body/folder_btn.png';
 import addBtn from '../../images/body/add_btn.png';
 import Header from '../../components/Header';
+import FolderMore from '../../components/FolderMore';
 
 const FolderListPage = () => {
   return (
     <>
       <Header />
+      <FolderMore />
+
       <div className={styles.folderList}>
         <div className={styles.folder}>
           <img src={folder} alt="" />

@@ -1,0 +1,85 @@
+.folderMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1.5rem;
+
+  color: white;
+  font-weight: 600;
+
+  .colorBtn {
+    width: 33px;
+    height: 30px;
+    padding: 10px 1.5rem 0px 0px;
+    cursor: pointer;
+
+    .color {
+      width: 23px;
+      height: 23px;
+      background: #ffca28;
+      border-radius: 50%;
+    }
+
+    .picker {
+      position: relative;
+      top: -30px;
+      right: -10px;
+
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/icons.png);
+      background-position: -910px -96px;
+    }
+  }
+
+  .moveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 52px;
+    margin-right: 1.3rem;
+
+    border-radius: 2px;
+    background: #3a9640;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1),
+      0px 5px 12px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+
+    .moveIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -123px -617px;
+    }
+  }
+
+  .deleteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 52px;
+
+    border-radius: 2px;
+    background: #3a9640;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1),
+      0px 5px 12px rgba(0, 0, 0, 0.22);
+
+    cursor: pointer;
+
+    .deleteIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -95px -617px;
+    }
+  }
+}

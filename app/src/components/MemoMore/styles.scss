@@ -1,0 +1,60 @@
+.memoMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1.5rem;
+
+  color: white;
+  font-weight: 600;
+
+  .moveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 52px;
+    margin-right: 1.3rem;
+
+    border-radius: 2px;
+    background: #3a9640;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1),
+      0px 5px 12px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+
+    .moveIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -123px -617px;
+    }
+  }
+
+  .deleteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 140px;
+    height: 52px;
+
+    border-radius: 2px;
+    background: #3a9640;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1),
+      0px 5px 12px rgba(0, 0, 0, 0.22);
+
+    cursor: pointer;
+
+    .deleteIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+
+      background-image: url(../../images/icons.png);
+      background-position: -95px -617px;
+    }
+  }
+}
