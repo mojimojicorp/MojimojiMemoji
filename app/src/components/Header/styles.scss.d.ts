@@ -4,6 +4,10 @@ interface CssExports {
   'backBtn': string;
   'header': string;
   'homeBtn': string;
+  'homeBtnDiv': string;
+  'logoutBtn': string;
+  'selectBtn': string;
+  'selectBtnActive': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

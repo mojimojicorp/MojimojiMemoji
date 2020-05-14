@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
 
   height: 97px;
@@ -15,10 +15,47 @@
   background: #fafafa;
 }
 
-.homeBtn {
-  height: 64px;
+.homeBtnDiv {
+  flex: 1;
+
+  .homeBtn {
+    width: 64px;
+    height: 64px;
+
+    background-image: url(../../images/icons.png);
+    background-position: -204px -192px;
+  }
+}
+
+.selectBtn {
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -389px -123px;
+}
+.selectBtnActive {
+  display: none;
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -389px -202px;
+}
+
+.logoutBtn {
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -114px -192px;
 }
 
 .backBtn {
   display: none;
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -23px -192px;
 }
