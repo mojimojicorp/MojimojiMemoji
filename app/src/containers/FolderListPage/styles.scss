@@ -1,27 +1,55 @@
-.folderList {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  justify-content: space-between;
-  align-items: center;
+.folderContainer {
+  display: flex;
+  justify-content: center;
+  
+  .folderList {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-
-  background-color: #ffffff;
-
-  .folder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.3rem;
-    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
+    background-color: #ffffff;
 
-    div {
-      margin-top: -20px;
+    .folder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 120px;
+      margin-bottom: 20px;
     }
+
+    .title {
+      margin-top: -10px;
+    }
+
+    .add {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 100px;
+      position: relative;
+
+      background-image: url('../../images/icons.png');
+      background-position: -113px -9px;
+      background-size: 318px 225px;
+    }
+  }
+}
+
+@media screen and (max-width: 509px){
+  .folderList {
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 510px){
+  .folderList {
+    width: 500px;
   }
 }
