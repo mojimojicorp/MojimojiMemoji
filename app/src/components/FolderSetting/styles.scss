@@ -1,4 +1,4 @@
-.memo_more {
+.folder_setting {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,6 +7,31 @@
 
   color: white;
   font-weight: 600;
+
+  .color_btn {
+    width: 33px;
+    height: 30px;
+    padding: 10px 23px 0px 0px;
+    cursor: pointer;
+
+    .color {
+      width: 23px;
+      height: 23px;
+      background: #ffca28;
+      border-radius: 50%;
+    }
+
+    .picker {
+      position: relative;
+      top: -30px;
+      right: -10px;
+
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/icons.png);
+      background-position: -910px -96px;
+    }
+  }
 
   .move_btn {
     display: flex;

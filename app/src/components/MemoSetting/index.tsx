@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './styles.scss';
 
-const MemoMore = () => {
+const MemoSetting = () => {
   return (
-    <div className={styles.memo_more}>
+    <div className={styles.memo_setting}>
       <div className={styles.move_btn}>
         <div className={styles.move_icon} />
         메모 이동
@@ -16,4 +16,4 @@ const MemoMore = () => {
   );
 };
 
-export default MemoMore;
+export default MemoSetting;

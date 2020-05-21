@@ -1,4 +1,4 @@
-.folderMore {
+.memo_setting {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,32 +8,7 @@
   color: white;
   font-weight: 600;
 
-  .colorBtn {
-    width: 33px;
-    height: 30px;
-    padding: 10px 23px 0px 0px;
-    cursor: pointer;
-
-    .color {
-      width: 23px;
-      height: 23px;
-      background: #ffca28;
-      border-radius: 50%;
-    }
-
-    .picker {
-      position: relative;
-      top: -30px;
-      right: -10px;
-
-      width: 20px;
-      height: 20px;
-      background-image: url(../../images/icons.png);
-      background-position: -910px -96px;
-    }
-  }
-
-  .moveBtn {
+  .move_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +23,7 @@
       0px 5px 12px rgba(0, 0, 0, 0.22);
     cursor: pointer;
 
-    .moveIcon {
+    .move_icon {
       width: 24px;
       height: 24px;
       margin-right: 10px;
@@ -58,7 +33,7 @@
     }
   }
 
-  .deleteBtn {
+  .delete_btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +48,7 @@
 
     cursor: pointer;
 
-    .deleteIcon {
+    .delete_icon {
       width: 24px;
       height: 24px;
       margin-right: 6px;

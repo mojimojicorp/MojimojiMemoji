@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './styles.scss';
 import Header from '../../components/Header';
-import MemoMore from '../../components/MemoMore';
+import MemoSetting from '../../components/MemoSetting';
 
 const MemoListPage = () => {
   return (
     <>
       <Header />
-      <MemoMore />
+      <MemoSetting />
 
       <div className={styles.memo_list_container}>
         <div className={styles.memo}>

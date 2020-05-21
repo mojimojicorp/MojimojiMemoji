@@ -2,12 +2,12 @@
 // Please do not change this file!
 interface CssExports {
   'color': string;
-  'colorBtn': string;
-  'deleteBtn': string;
-  'deleteIcon': string;
-  'folderMore': string;
-  'moveBtn': string;
-  'moveIcon': string;
+  'color_btn': string;
+  'delete_btn': string;
+  'delete_icon': string;
+  'folder_setting': string;
+  'move_btn': string;
+  'move_icon': string;
   'picker': string;
 }
 export const cssExports: CssExports;

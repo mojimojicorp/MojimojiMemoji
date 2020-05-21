@@ -3,7 +3,7 @@
 interface CssExports {
   'delete_btn': string;
   'delete_icon': string;
-  'memo_more': string;
+  'memo_setting': string;
   'move_btn': string;
   'move_icon': string;
 }

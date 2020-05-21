@@ -3,13 +3,13 @@ import styles from './styles.scss';
 import folder from '../../images/body/folder_btn.png';
 import addBtn from '../../images/body/add_btn.png';
 import Header from '../../components/Header';
-import FolderMore from '../../components/FolderMore';
+import FolderSetting from '../../components/FolderSetting';
 
 const FolderListPage = () => {
   return (
     <>
       <Header />
-      <FolderMore />
+      <FolderSetting />
 
       <div className={styles.folder_list_container}>
         <div className={styles.folder}>
