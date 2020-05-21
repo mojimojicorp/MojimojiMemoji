@@ -6,6 +6,7 @@ interface CssExports {
   'home_btn': string;
   'home_btn_div': string;
   'logout_btn': string;
+  'save_btn': string;
   'select_btn': string;
   'select_btn_active': string;
 }
