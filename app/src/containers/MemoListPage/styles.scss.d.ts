@@ -2,10 +2,10 @@
 // Please do not change this file!
 interface CssExports {
   'add': string;
-  'addMemoBtn': string;
+  'add_memo_btn': string;
   'date': string;
   'memo': string;
-  'memoList': string;
+  'memo_list_container': string;
   'text': string;
 }
 export const cssExports: CssExports;

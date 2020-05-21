@@ -11,7 +11,7 @@ const FolderListPage = () => {
       <Header />
       <FolderMore />
 
-      <div className={styles.folderList}>
+      <div className={styles.folder_list_container}>
         <div className={styles.folder}>
           <img src={folder} alt="" />
           <div className="title">새 폴더</div>

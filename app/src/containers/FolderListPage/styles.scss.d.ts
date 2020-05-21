@@ -2,7 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'folder': string;
-  'folderList': string;
+  'folder_list_container': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
