@@ -1,11 +1,12 @@
-.folderContainer {
+.folder_container {
   display: flex;
   justify-content: center;
   
-  .folderList {
+  .folder_list {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 30px;
 
     padding: 10px;
     box-sizing: border-box;
@@ -20,6 +21,8 @@
       position: relative;
       width: 120px;
       margin-bottom: 20px;
+      
+      cursor: pointer;
     }
 
     .title {
@@ -38,18 +41,19 @@
       background-image: url('../../images/icons.png');
       background-position: -113px -9px;
       background-size: 318px 225px;
+      cursor: pointer;
     }
   }
 }
 
 @media screen and (max-width: 509px){
-  .folderList {
+  .folder_list {
     width: 380px;
   }
 }
 
 @media screen and (min-width: 510px){
-  .folderList {
+  .folder_list {
     width: 500px;
   }
 }

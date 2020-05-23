@@ -8,8 +8,9 @@ const FolderListPage = () => {
   return (
     <>
       <Header />
-      <div className={styles.folderContainer}>
-        <div className={styles.folderList}>
+      <FolderSetting />
+      <div className={styles.folder_container}>
+        <div className={styles.folder_list}>
           <div className={styles.folder}>
             <Folder />
             <div className={styles.title}>새 폴더</div>

@@ -3,8 +3,8 @@
 interface CssExports {
   'add': string;
   'folder': string;
-  'folderContainer': string;
-  'folderList': string;
+  'folder_container': string;
+  'folder_list': string;
   'title': string;
 }
 export const cssExports: CssExports;
