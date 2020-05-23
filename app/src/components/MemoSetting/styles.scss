@@ -1,0 +1,55 @@
+.memo_setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 25px;
+  width: 100%;
+
+  color: #3a9640;
+  font-weight: 600;
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+
+    .move_btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 80px;
+
+      cursor: pointer;
+
+      .move_icon {
+        width: 36px;
+        height: 36px;
+
+        background-image: url(../../images/icons.png);
+        background-position: -143px -607px;
+      }
+    }
+
+    .delete_btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 80px;
+
+      cursor: pointer;
+
+      .delete_icon {
+        width: 37px;
+        height: 37px;
+
+        background-image: url(../../images/icons.png);
+        background-position: -178px -604px;
+      }
+    }
+  }
+}

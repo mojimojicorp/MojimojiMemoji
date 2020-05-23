@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
 
   height: 97px;
@@ -15,10 +15,56 @@
   background: #fafafa;
 }
 
-.homeBtn {
-  height: 64px;
+.home_btn_div {
+  flex: 1;
+
+  .home_btn {
+    width: 64px;
+    height: 64px;
+
+    background-image: url(../../images/icons.png);
+    background-position: -204px -192px;
+  }
 }
 
-.backBtn {
+.select_btn {
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -389px -123px;
+}
+.select_btn_active {
   display: none;
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -389px -202px;
+}
+
+.logout_btn {
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -114px -192px;
+}
+
+.save_btn {
+  display: none;
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -320px -239px;
+}
+
+.back_btn {
+  display: none;
+  width: 68px;
+  height: 77px;
+
+  background-image: url(../../images/icons.png);
+  background-position: -23px -192px;
 }

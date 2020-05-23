@@ -1,4 +1,4 @@
-.memoList {
+.memo_list_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,40 +9,33 @@
   background-color: #ffffff;
 
   .memo {
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    grid-template-columns: 20fr 0.5fr;
+    display: flex;
+    flex-direction: column;
 
     width: calc(100% - 2rem);
     height: 130px;
-    padding: 1rem;
+    padding: 15px;
     margin-bottom: 32px;
 
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.22);
     border-radius: 2px;
     background: #fff1a6;
 
-    img {
-      justify-self: end;
-    }
-
     .text {
+      height: 82%;
       font-size: 16px;
       color: #000000;
     }
 
     .date {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      justify-self: end;
-      align-self: center;
+      align-self: flex-end;
       font-size: 16px;
       color: #535353;
     }
   }
 }
 
-.addMemoBtn {
+.add_memo_btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
