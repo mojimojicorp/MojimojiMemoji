@@ -8,7 +8,7 @@ import FolderSetting from '../../components/FolderSetting';
 const FolderListPage = () => {
   return (
     <>
-      <Header />
+      <Header path="folder-list" />
       <FolderSetting />
 
       <div className={styles.folder_list_container}>

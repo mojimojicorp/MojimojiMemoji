@@ -6,7 +6,7 @@ import MemoSetting from '../../components/MemoSetting';
 const MemoListPage = () => {
   return (
     <>
-      <Header />
+      <Header path="memo-list" />
       <MemoSetting />
 
       <div className={styles.memo_list_container}>

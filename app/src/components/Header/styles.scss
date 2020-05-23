@@ -24,6 +24,7 @@
 
     background-image: url(../../images/icons.png);
     background-position: -204px -192px;
+    cursor: pointer;
   }
 }
 
@@ -33,14 +34,15 @@
 
   background-image: url(../../images/icons.png);
   background-position: -389px -123px;
+  cursor: pointer;
 }
 .select_btn_active {
-  display: none;
   width: 68px;
   height: 77px;
 
   background-image: url(../../images/icons.png);
   background-position: -389px -202px;
+  cursor: pointer;
 }
 
 .logout_btn {
@@ -49,22 +51,23 @@
 
   background-image: url(../../images/icons.png);
   background-position: -114px -192px;
+  cursor: pointer;
 }
 
 .save_btn {
-  display: none;
   width: 68px;
   height: 77px;
 
   background-image: url(../../images/icons.png);
   background-position: -320px -239px;
+  cursor: pointer;
 }
 
 .back_btn {
-  display: none;
   width: 68px;
   height: 77px;
 
   background-image: url(../../images/icons.png);
   background-position: -23px -192px;
+  cursor: pointer;
 }
