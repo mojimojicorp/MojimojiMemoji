@@ -1,27 +1,59 @@
-.folder_list_container {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  justify-content: space-between;
-  align-items: center;
+.folder_container {
+  display: flex;
+  justify-content: center;
+  
+  .folder_list {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
 
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-
-  background-color: #ffffff;
-
-  .folder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 18px;
-    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
+    background-color: #ffffff;
 
-    div {
-      margin-top: -20px;
+    .folder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 120px;
+      margin-bottom: 20px;
+      
+      cursor: pointer;
     }
+
+    .title {
+      margin-top: -10px;
+    }
+
+    .add {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 100px;
+      position: relative;
+
+      background-image: url('../../images/icons.png');
+      background-position: -113px -9px;
+      background-size: 318px 225px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 509px){
+  .folder_list {
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 510px){
+  .folder_list {
+    width: 500px;
   }
 }
