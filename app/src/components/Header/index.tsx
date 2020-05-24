@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './styles.scss';
 
-export interface Props {
-  path: string;
-}
+type HeaderProps = {
+  hasSelectBtn?: boolean,
+  hasLogoutBtn?: boolean,
+  hasSaveBtn?: boolean,
+  hasBackBtn?: boolean,
+};
 
-const Header = ({ path }: Props) => {
-  const [select, setSelect] = useState(false);
-  const [logout, setLogout] = useState(false);
-  const [save, setSave] = useState(false);
-  const [back, setBack] = useState(false);
-
-  useEffect(() => {
-    if (path == 'folder-list') {
-      setSelect(true);
-      setLogout(true);
-      setSave(false);
-      setBack(false);
-    } else if (path === 'memo-list') {
-      setSelect(true);
-      setLogout(false);
-      setSave(false);
-      setBack(true);
-    } else if (path === 'memo-edit') {
-      setSelect(false);
-      setLogout(false);
-      setSave(true);
-      setBack(true);
-    }
-  });
+const Header = ({ hasSelectBtn, hasLogoutBtn, hasSaveBtn, hasBackBtn  }: HeaderProps) => {
 
   return (
     <div className={styles.header}>
@@ -36,10 +16,10 @@ const Header = ({ path }: Props) => {
         <div className={styles.home_btn} />
       </div>
 
-      {select ? <div className={styles.select_btn} /> : null}
-      {save ? <div className={styles.save_btn} /> : null}
-      {logout ? <div className={styles.logout_btn} /> : null}
-      {back ? <div className={styles.back_btn} /> : null}
+      { hasSelectBtn && <div className={styles.select_btn} /> }
+      { hasSaveBtn && <div className={styles.save_btn} /> }
+      { hasLogoutBtn && <div className={styles.logout_btn} /> }
+      { hasBackBtn && <div className={styles.back_btn} /> }
     </div>
   );
 };

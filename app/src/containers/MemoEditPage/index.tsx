@@ -6,7 +6,8 @@ import styles from './styles.scss';
 const MemoEditPage = () => {
   return (
     <div className={styles.edit_container}>
-      <Header path="memo-edit" />
+      <Header hasSaveBtn={true} hasBackBtn={true} />
+      
       <div className={styles.toolbar}>
         <div className={styles.bold} />
         <div className={styles.italic} />
