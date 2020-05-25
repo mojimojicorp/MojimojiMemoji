@@ -7,7 +7,7 @@ import FolderSetting from '../../components/FolderSetting';
 const FolderListPage = () => {
   return (
     <>
-      <Header hasSelectBtn={true} hasLogoutBtn={true}/>
+      <Header hasSelectBtn={true} hasLogoutBtn={true} />
       <FolderSetting />
       <div className={styles.folder_container}>
         <div className={styles.folder_list}>
