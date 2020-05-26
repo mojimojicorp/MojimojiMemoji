@@ -10,7 +10,7 @@ const MemoListPage = () => {
       <Header />
       <MemoSetting />
 
-      <div className={styles.memo_list_container}>
+      <section className={styles.memo_list_container}>
         <Memo />
         <Memo />
         <Memo />
@@ -19,7 +19,7 @@ const MemoListPage = () => {
           <div className={styles.add} />
           메모 추가
         </div>
-      </div>
+      </section>
     </>
   );
 };
