@@ -43,7 +43,7 @@ $bgColor: #fafafa;
 .select_btn {
   @include btn(68px, 77px, -389px, -123px);
 
-  .active {
+  &.active {
     background-position: -389px -202px;
   }
 }
