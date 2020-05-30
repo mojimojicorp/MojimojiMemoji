@@ -18,7 +18,7 @@ const Header = ({
   hasSaveBtn,
   hasBackBtn,
 }: HeaderProps) => {
-  const toggleSelect = () => {
+  const handleSelectBtnClick = () => {
     setIsSelecting(!isSelecting);
   };
 
@@ -37,7 +37,7 @@ const Header = ({
               styles.select_btn,
               isSelecting ? styles.active : ''
             )}
-            onClick={toggleSelect}
+            onClick={handleSelectBtnClick}
           />
         )}
         {hasSaveBtn && <button className={styles.save_btn} />}
