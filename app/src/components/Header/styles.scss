@@ -1,3 +1,20 @@
+$bgColor: #fafafa;
+
+@mixin btn($width, $height, $posx, $posy) {
+  width: $width;
+  height: $height;
+
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  background : {
+    image: url(../../images/icons.png);
+    position: $posx $posy;
+    color: transparent;
+  }
+}
+
 .header {
   display: flex;
   justify-content: start;
@@ -12,59 +29,33 @@
   position: sticky;
   top: 0;
 
-  background: #fafafa;
+  background: $bgColor;
 }
 
 .home_btn_div {
   flex: 1;
 
   .home_btn {
-    width: 64px;
-    height: 64px;
-
-    background-image: url(../../images/icons.png);
-    background-position: -204px -192px;
+    @include btn(64px, 64px, -204px, -192px);
   }
 }
 
 .select_btn {
-  width: 68px;
-  height: 77px;
+  @include btn(68px, 77px, -389px, -123px);
 
-  background-image: url(../../images/icons.png);
-  background-position: -389px -123px;
-}
-.select_btn_active {
-  display: none;
-  width: 68px;
-  height: 77px;
-
-  background-image: url(../../images/icons.png);
-  background-position: -389px -202px;
+  &.active {
+    background-position: -389px -202px;
+  }
 }
 
 .logout_btn {
-  width: 68px;
-  height: 77px;
-
-  background-image: url(../../images/icons.png);
-  background-position: -114px -192px;
+  @include btn(68px, 77px, -114px, -192px);
 }
 
 .save_btn {
-  display: none;
-  width: 68px;
-  height: 77px;
-
-  background-image: url(../../images/icons.png);
-  background-position: -320px -239px;
+  @include btn(68px, 77px, -320px, -239px);
 }
 
 .back_btn {
-  display: none;
-  width: 68px;
-  height: 77px;
-
-  background-image: url(../../images/icons.png);
-  background-position: -23px -192px;
+  @include btn(68px, 77px, -23px, -192px);
 }
