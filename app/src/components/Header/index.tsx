@@ -1,19 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import styles from './styles.scss';
 
-const Header = () => {
-  return (
-    <div className={styles.header}>
-      <div className={styles.home_btn_div}>
-        <div className={styles.home_btn} />
-      </div>
+import FolderSetting from '../../components/FolderSetting';
+import MemoSetting from '../../components/MemoSetting';
 
-      <div className={styles.select_btn} />
-      <div className={styles.select_btn_active} />
-      <div className={styles.logout_btn} />
-      <div className={styles.save_btn} />
-      <div className={styles.back_btn} />
-    </div>
+type HeaderProps = {
+  hasSelectBtn?: boolean;
+  hasLogoutBtn?: boolean;
+  hasSaveBtn?: boolean;
+  hasBackBtn?: boolean;
+};
+
+const Header = ({
+  hasSelectBtn,
+  hasLogoutBtn,
+  hasSaveBtn,
+  hasBackBtn,
+}: HeaderProps) => {
+  const handleSelectBtnClick = () => {
+    setIsSelecting(!isSelecting);
+  };
+
+  const [isSelecting, setIsSelecting] = useState(false);
+
+  return (
+    <>
+      <header className={styles.header}>
+        <div className={styles.home_btn_div}>
+          <button className={styles.home_btn} type="button" />
+        </div>
+
+        {hasSelectBtn && (
+          <button
+            className={classNames(
+              styles.select_btn,
+              isSelecting ? styles.active : ''
+            )}
+            onClick={handleSelectBtnClick}
+          />
+        )}
+        {hasSaveBtn && <button className={styles.save_btn} />}
+        {hasLogoutBtn && <button className={styles.logout_btn} />}
+        {hasBackBtn && <button className={styles.back_btn} />}
+      </header>
+
+      {isSelecting && hasLogoutBtn && <FolderSetting />}
+      {isSelecting && hasBackBtn && <MemoSetting />}
+    </>
   );
 };
 

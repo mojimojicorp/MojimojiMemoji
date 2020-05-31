@@ -2,13 +2,11 @@ import React from 'react';
 import styles from './styles.scss';
 import Header from '../../components/Header';
 import Memo from '../../components/Memo';
-import MemoSetting from '../../components/MemoSetting';
 
 const MemoListPage = () => {
   return (
     <>
-      <Header />
-      <MemoSetting />
+      <Header hasSelectBtn={true} hasBackBtn={true} />
 
       <section className={styles.memo_list_container}>
         <Memo />
