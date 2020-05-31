@@ -1,0 +1,26 @@
+.memo {
+  display: flex;
+  flex-direction: column;
+
+  width: 97%;
+  height: 130px;
+  padding: 15px;
+  margin-bottom: 32px;
+
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 2px;
+  background: #fff1a6;
+  cursor: pointer;
+
+  .text {
+    height: 82%;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  .date {
+    align-self: flex-end;
+    font-size: 16px;
+    color: #535353;
+  }
+}
