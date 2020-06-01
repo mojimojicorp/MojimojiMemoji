@@ -125,6 +125,10 @@
   }
 
   .edit_area {
-    width: 100%;
+    height: calc(100% - 200px);
+    margin: 0;
+    padding: 20px;
+    font-size: 17px;
+    outline: none;
   }
 }
