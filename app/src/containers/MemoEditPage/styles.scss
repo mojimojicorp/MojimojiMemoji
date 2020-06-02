@@ -1,3 +1,20 @@
+@mixin btn($width, $height, $posx, $posy) {
+  width: $width;
+  height: $height;
+
+  margin: 0 3px;
+
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  background : {
+    image: url(../../images/icons.png);
+    position: $posx $posy;
+    color: transparent;
+  }
+}
+
 .edit_container {
   width: 100%;
   height: 100%;
@@ -23,103 +40,62 @@
     }
 
     .bold {
-      width: 23.5px;
-      height: 25px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -344px -128px;
+      @include btn(23.5px, 25px, -344px, -128px);
+      opacity: 54%;
     }
 
     .italic {
-      width: 23.5px;
-      height: 25px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -346px -93px;
+      @include btn(23.5px, 25px, -346px, -93px);
       opacity: 54%;
     }
 
     .underline {
-      width: 23.5px;
-      height: 25px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -307px -49px;
+      @include btn(23.5px, 25px, -307px, -49px);
       background-size: 420px 299px;
       opacity: 54%;
     }
 
-    .removeline {
-      width: 23.5px;
-      height: 25px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -509px -184px;
+    .strike {
+      @include btn(23.5px, 25px, -509px, -184px);
       background-size: 318px 265px;
+      opacity: 54%;
     }
 
     .divider {
-      width: 2px;
-      height: 20px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -350px -170px;
-
+      @include btn(2px, 20px, -350px, -170px);
+      margin-left: 5px;
       cursor: none;
     }
 
     .align {
-      width: 24px;
-      height: 24px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -286px -15px;
+      @include btn(24px, 24px, -286px, -15px);
+      margin-right: 6px;
       background-size: 390px 300px;
     }
 
     .link {
-      width: 27px;
-      height: 20px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -48px -468px;
+      @include btn(27px, 20px, -48px, -468px);
       background-size: 383px 251px;
     }
 
     .image {
-      width: 27px;
-      height: 27px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -284px -186px;
+      @include btn(27px, 27px, -284px, -186px);
       background-size: 470px 326px;
     }
 
     .table {
-      width: 23px;
-      height: 23px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -19px -308px;
+      @include btn(23px, 23px, -19px, -308px);
       background-size: 448px 350px;
     }
 
     .logo {
-      width: 25px;
-      height: 25px;
+      @include btn(25px, 25px, -555px, -5px);
       margin: 0px 10px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -555px -5px;
       background-size: 195px 136px;
     }
 
     .folder {
-      width: 25px;
-      height: 25px;
-
-      background-image: url(../../images/icons.png);
-      background-position: -4px -5px;
+      @include btn(25px, 25px, -4px, -5px);
       background-size: 81px 61px;
     }
   }
@@ -128,7 +104,11 @@
     height: calc(100% - 200px);
     margin: 0;
     padding: 20px;
-    font-size: 17px;
+    font-size: 20px;
     outline: none;
   }
+}
+
+.active {
+  opacity: 100% !important;
 }
