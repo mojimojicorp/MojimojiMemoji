@@ -5,6 +5,7 @@ interface CssExports {
   'folder': string;
   'folder_container': string;
   'folder_list': string;
+  'selected': string;
   'title': string;
 }
 export const cssExports: CssExports;

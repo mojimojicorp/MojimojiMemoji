@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
+import classnames from 'classnames/bind';
 
 import styles from './styles.scss';
 import Header from '../../components/Header';
 import Folder from '../../components/Folder';
 import folders from '../../mock/folders';
 
+const cx = classnames.bind({ ...styles });
+
 const FolderListPage = () => {
   const [isSelecting, setIsSelecting] = useState<boolean>(false);
+  const [selectedFolders, setSelectedFolders] = useState<number[]>([]);
+
+  const handleFolderClick = (id: number) => {
+    if (!isSelecting) return;
+
+    if (selectedFolders.includes(id)) {
+      const newSelectedFolders = [...selectedFolders];
+      const index = selectedFolders.indexOf(id);
+      newSelectedFolders.splice(index, 1);
+      setSelectedFolders(newSelectedFolders);
+      return;
+    }
+
+    setSelectedFolders([...selectedFolders, id]);
+  };
   return (
     <>
       <Header
@@ -20,7 +38,11 @@ const FolderListPage = () => {
         <div className={styles.folder_list}>
           {folders.map((folder) => {
             return (
-              <div className={styles.folder} key={folder.id}>
+              <div
+                className={cx('folder', { selected: selectedFolders.includes(folder.id) })}
+                key={folder.id}
+                onClick={() => handleFolderClick(folder.id)}
+              >
                 <Folder color={folder.color} />
                 <div className={styles.title}>{folder.name}</div>
               </div>

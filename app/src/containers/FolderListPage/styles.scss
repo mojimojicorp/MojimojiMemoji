@@ -1,9 +1,9 @@
 .folder_container {
   display: flex;
   justify-content: center;
-  
+
   .folder_list {
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 30px;
@@ -13,6 +13,11 @@
     text-align: center;
     background-color: #ffffff;
 
+    .selected {
+      background-color: #dddddd;
+      border-radius: 10px;
+    }
+
     .folder {
       display: flex;
       flex-direction: column;
@@ -21,7 +26,8 @@
       position: relative;
       width: 120px;
       margin-bottom: 20px;
-      
+      padding: 10px;
+
       cursor: pointer;
     }
 
@@ -46,13 +52,13 @@
   }
 }
 
-@media screen and (max-width: 509px){
+@media screen and (max-width: 509px) {
   .folder_list {
     width: 380px;
   }
 }
 
-@media screen and (min-width: 510px){
+@media screen and (min-width: 510px) {
   .folder_list {
     width: 500px;
   }

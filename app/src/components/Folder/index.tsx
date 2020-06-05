@@ -12,14 +12,8 @@ const Folder = (props: FolderProps) => {
 
   return (
     <div className={styles.folder_container}>
-      <div
-        className={styles.folder_header}
-        style={{ backgroundColor: colors[color].head }}
-      />
-      <div
-        className={styles.folder_body}
-        style={{ backgroundColor: colors[color].body }}
-      />
+      <div className={styles.folder_header} style={{ backgroundColor: colors[color].head }} />
+      <div className={styles.folder_body} style={{ backgroundColor: colors[color].body }} />
     </div>
   );
 };
