@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 import styles from './styles.scss';
 
 const MemoEditPage = () => {
+  const [isSelecting, setIsSelecting] = useState<boolean>(false);
+
   return (
     <div className={styles.edit_container}>
-      <Header hasSaveBtn={true} hasBackBtn={true} />
-      
+      <Header
+        hasSaveBtn={true}
+        hasBackBtn={true}
+        isSelecting={isSelecting}
+        setIsSelecting={setIsSelecting}
+      />
+
       <div className={styles.toolbar}>
         <div className={styles.bold} />
         <div className={styles.italic} />
