@@ -1,7 +1,9 @@
 import React from 'react';
+
 import styles from './styles.scss';
 import Header from '../../components/Header';
 import Folder from '../../components/Folder';
+import folders from '../../mock/folders';
 
 const FolderListPage = () => {
   return (
@@ -10,22 +12,14 @@ const FolderListPage = () => {
 
       <div className={styles.folder_container}>
         <div className={styles.folder_list}>
-          <div className={styles.folder}>
-            <Folder />
-            <div className={styles.title}>새 폴더</div>
-          </div>
-          <div className={styles.folder}>
-            <Folder />
-            <div className={styles.title}>새 폴더</div>
-          </div>
-          <div className={styles.folder}>
-            <Folder />
-            <div className={styles.title}>새 폴더</div>
-          </div>
-          <div className={styles.folder}>
-            <Folder />
-            <div className={styles.title}>새 폴더</div>
-          </div>
+          {folders.map((folder) => {
+            return (
+              <div className={styles.folder} key={folder.id}>
+                <Folder color={folder.color} />
+                <div className={styles.title}>{folder.name}</div>
+              </div>
+            );
+          })}
           <div className={styles.add} />
         </div>
       </div>

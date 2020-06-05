@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './styles.scss';
 
-import FolderSetting from '../../components/FolderSetting';
-import MemoSetting from '../../components/MemoSetting';
+import FolderSetting from '../FolderSetting';
+import MemoSetting from '../MemoSetting';
 
 type HeaderProps = {
   hasSelectBtn?: boolean;
