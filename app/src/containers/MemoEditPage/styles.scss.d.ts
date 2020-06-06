@@ -11,7 +11,7 @@ interface CssExports {
   'folder': string;
   'image': string;
   'italic': string;
-  'justified': string;
+  'justify': string;
   'left': string;
   'link': string;
   'logo': string;

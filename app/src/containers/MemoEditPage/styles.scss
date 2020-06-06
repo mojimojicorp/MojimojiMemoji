@@ -68,20 +68,31 @@
     }
 
     .align {
-      @include btn(24px, 24px, -286px, -15px);
-      margin-right: 6px;
+      width: 24px;
+      height: 24px;
+
+      margin: 0 6px 0 3px;
+
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+
+      background : {
+        image: url(../../images/icons.png);
+        color: transparent;
+      }
 
       &.center {
-        background-size: 390px 300px;
+        background-position: -349px -17px;
       }
       &.left {
-        background-size: 390px 300px;
+        background-position: -222px -281px;
       }
       &.right {
-        background-size: 390px 300px;
+        background-position: -248px -281px;
       }
-      &.justified {
-        background-size: 390px 300px;
+      &.justify {
+        background-position: -274px -281px;
       }
     }
 

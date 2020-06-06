@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import classnames from 'classnames/bind';
 
 import Header from '../../components/Header';
 import styles from './styles.scss';
+
+const cx = classnames.bind({ ...styles });
 
 const MemoEditPage = () => {
   const [isSelecting, setIsSelecting] = useState<boolean>(false);
@@ -39,7 +42,23 @@ const MemoEditPage = () => {
     }
   };
 
-  const handleAlign = () => {};
+  const handleAlign = () => {
+    const edit_area = document.getElementById('edit_area');
+
+    if (alignStatus === 'left') {
+      edit_area.setAttribute('align', 'center');
+      setAlignStatus('center');
+    } else if (alignStatus === 'center') {
+      edit_area.setAttribute('align', 'right');
+      setAlignStatus('right');
+    } else if (alignStatus === 'right') {
+      edit_area.setAttribute('align', 'justify');
+      setAlignStatus('justify');
+    } else if (alignStatus === 'justify') {
+      edit_area.setAttribute('align', 'left');
+      setAlignStatus('left');
+    }
+  };
 
   return (
     <div className={styles.edit_container}>
@@ -91,7 +110,11 @@ const MemoEditPage = () => {
         />
         <button className={styles.divider} />
 
-        <button className={styles.align} onClick={handleAlign} />
+        <input
+          type="button"
+          className={cx('align', alignStatus)}
+          onClick={handleAlign}
+        />
 
         <button className={styles.divider} />
 
@@ -101,7 +124,7 @@ const MemoEditPage = () => {
         <button className={styles.logo} />
         <button className={styles.folder} />
       </div>
-      <div className={styles.edit_area} contentEditable="true" />
+      <div className={styles.edit_area} id="edit_area" contentEditable="true" />
     </div>
   );
 };
