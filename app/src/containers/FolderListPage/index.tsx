@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames/bind';
 
 import styles from './styles.scss';
@@ -11,6 +11,10 @@ const cx = classnames.bind({ ...styles });
 const FolderListPage = () => {
   const [isSelecting, setIsSelecting] = useState<boolean>(false);
   const [selectedFolders, setSelectedFolders] = useState<number[]>([]);
+
+  useEffect(() => {
+    setSelectedFolders([]);
+  }, [isSelecting]);
 
   const handleFolderClick = (id: number) => {
     if (!isSelecting) return;
@@ -39,7 +43,9 @@ const FolderListPage = () => {
           {folders.map((folder) => {
             return (
               <div
-                className={cx('folder', { selected: selectedFolders.includes(folder.id) })}
+                className={cx('folder', {
+                  selected: selectedFolders.includes(folder.id),
+                })}
                 key={folder.id}
                 onClick={() => handleFolderClick(folder.id)}
               >
