@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import styles from './styles.scss';
 
 const MemoEditPage = () => {
+  const [isSelecting, setIsSelecting] = useState<boolean>(false);
   const [isBoldActive, setIsBoldActive] = useState<boolean>(false);
   const [isItalicActive, setIsItalicActive] = useState<boolean>(false);
   const [isUnderlineActive, setIsUnderlineActive] = useState<boolean>(false);
@@ -42,7 +43,12 @@ const MemoEditPage = () => {
 
   return (
     <div className={styles.edit_container}>
-      <Header hasSaveBtn={true} hasBackBtn={true} />
+      <Header
+        hasSaveBtn={true}
+        hasBackBtn={true}
+        isSelecting={isSelecting}
+        setIsSelecting={setIsSelecting}
+      />
 
       <div className={styles.toolbar}>
         <button
@@ -76,7 +82,7 @@ const MemoEditPage = () => {
           onMouseUp={() => handleMouseUp('underline')}
         />
         <button
-          className={`${styles.strike} `}
+          className={`${styles.strike} ${isStrikeActive ? styles.active : ''}`}
           onMouseDown={() => {
             format('strikeThrough');
             handleMouseDown('strikeThrough');

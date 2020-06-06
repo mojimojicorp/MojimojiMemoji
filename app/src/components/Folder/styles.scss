@@ -5,14 +5,14 @@
   position: relative;
   width: 100px;
   height: 80px;
-    
+
   .folder_header {
     position: absolute;
     top: 5px;
     left: 10px;
     width: 30px;
     height: 30px;
-    background-color: #ffc928;
+    // background-color: #ff9f00;
     border-radius: 10px 0px 0px 0px;
 
     &:after {
@@ -23,15 +23,15 @@
       height: 30px;
       transform: rotateZ(45deg);
       background-color: inherit;
-      content:'';
+      content: '';
     }
   }
-    
+
   .folder_body {
     position: absolute;
     width: 80px;
     height: 50px;
-    background-color: #ffc928;
+    // background-color: #ffc928;
     border-radius: 10px;
   }
 }
