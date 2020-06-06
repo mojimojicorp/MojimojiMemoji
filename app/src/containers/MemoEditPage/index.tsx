@@ -70,45 +70,43 @@ const MemoEditPage = () => {
       />
 
       <div className={styles.toolbar}>
-        <button
-          className={`${styles.bold}
-            ${isBoldActive ? styles.active : ''}
-            `}
+        <input
+          type="button"
+          className={cx('bold', { active: isBoldActive })}
           onMouseDown={() => {
             format('bold');
             handleMouseDown('bold');
           }}
           onMouseUp={() => handleMouseUp('bold')}
         />
-
-        <button
-          className={`${styles.italic} ${isItalicActive ? styles.active : ''}
-            `}
+        <input
+          type="button"
+          className={cx('italic', { active: isItalicActive })}
           onMouseDown={() => {
             format('italic');
             handleMouseDown('italic');
           }}
           onMouseUp={() => handleMouseUp('italic')}
         />
-        <button
-          className={`${styles.underline} ${
-            isUnderlineActive ? styles.active : ''
-          }`}
+        <input
+          type="button"
+          className={cx('underline', { active: isUnderlineActive })}
           onMouseDown={() => {
             format('underline');
             handleMouseDown('underline');
           }}
           onMouseUp={() => handleMouseUp('underline')}
         />
-        <button
-          className={`${styles.strike} ${isStrikeActive ? styles.active : ''}`}
+        <input
+          type="button"
+          className={cx('strike', { active: isStrikeActive })}
           onMouseDown={() => {
             format('strikeThrough');
             handleMouseDown('strikeThrough');
           }}
           onMouseUp={() => handleMouseUp('strikeThrough')}
         />
-        <button className={styles.divider} />
+        <input type="button" className={styles.divider} />
 
         <input
           type="button"
@@ -116,13 +114,13 @@ const MemoEditPage = () => {
           onClick={handleAlign}
         />
 
-        <button className={styles.divider} />
+        <input type="button" className={styles.divider} />
 
-        <button className={styles.link} />
-        <button className={styles.image} />
-        <button className={styles.table} />
-        <button className={styles.logo} />
-        <button className={styles.folder} />
+        <input type="button" className={styles.link} />
+        <input type="button" className={styles.image} />
+        <input type="button" className={styles.table} />
+        <input type="button" className={styles.logo} />
+        <input type="button" className={styles.folder} />
       </div>
       <div className={styles.edit_area} id="edit_area" contentEditable="true" />
     </div>
