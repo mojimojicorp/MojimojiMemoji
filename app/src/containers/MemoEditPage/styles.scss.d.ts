@@ -4,14 +4,18 @@ interface CssExports {
   'active': string;
   'align': string;
   'bold': string;
+  'center': string;
   'divider': string;
   'edit_area': string;
   'edit_container': string;
   'folder': string;
   'image': string;
   'italic': string;
+  'justified': string;
+  'left': string;
   'link': string;
   'logo': string;
+  'right': string;
   'strike': string;
   'table': string;
   'toolbar': string;

@@ -4,10 +4,11 @@ import Header from '../../components/Header';
 import styles from './styles.scss';
 
 const MemoEditPage = () => {
-  const [isBoldActive, setIsBoldActive] = useState(false);
-  const [isItalicActive, setIsItalicActive] = useState(false);
-  const [isUnderlineActive, setIsUnderlineActive] = useState(false);
-  const [isStrikeActive, setIsStrikeActive] = useState(false);
+  const [isBoldActive, setIsBoldActive] = useState<boolean>(false);
+  const [isItalicActive, setIsItalicActive] = useState<boolean>(false);
+  const [isUnderlineActive, setIsUnderlineActive] = useState<boolean>(false);
+  const [isStrikeActive, setIsStrikeActive] = useState<boolean>(false);
+  const [alignStatus, setAlignStatus] = useState<string>('left');
 
   const format = (command: string) => {
     document.execCommand(command);
@@ -36,6 +37,8 @@ const MemoEditPage = () => {
       setIsStrikeActive(false);
     }
   };
+
+  const handleAlign = () => {};
 
   return (
     <div className={styles.edit_container}>
@@ -73,7 +76,7 @@ const MemoEditPage = () => {
           onMouseUp={() => handleMouseUp('underline')}
         />
         <button
-          className={`${styles.strike} ${isStrikeActive ? styles.active : ''}`}
+          className={`${styles.strike} `}
           onMouseDown={() => {
             format('strikeThrough');
             handleMouseDown('strikeThrough');
@@ -81,8 +84,11 @@ const MemoEditPage = () => {
           onMouseUp={() => handleMouseUp('strikeThrough')}
         />
         <button className={styles.divider} />
-        <button className={styles.align} />
+
+        <button className={styles.align} onClick={handleAlign} />
+
         <button className={styles.divider} />
+
         <button className={styles.link} />
         <button className={styles.image} />
         <button className={styles.table} />

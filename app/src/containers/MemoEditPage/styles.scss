@@ -64,13 +64,25 @@
     .divider {
       @include btn(2px, 20px, -350px, -170px);
       margin-left: 5px;
-      cursor: none;
+      cursor: default;
     }
 
     .align {
       @include btn(24px, 24px, -286px, -15px);
       margin-right: 6px;
-      background-size: 390px 300px;
+
+      &.center {
+        background-size: 390px 300px;
+      }
+      &.left {
+        background-size: 390px 300px;
+      }
+      &.right {
+        background-size: 390px 300px;
+      }
+      &.justified {
+        background-size: 390px 300px;
+      }
     }
 
     .link {
