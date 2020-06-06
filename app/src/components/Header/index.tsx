@@ -30,19 +30,18 @@ const Header = ({
     <>
       <header className={styles.header}>
         <div className={styles.home_btn_div}>
-          <button className={styles.home_btn} type="button">
-            ''
-          </button>
+          <input className={styles.home_btn} type="button" />
         </div>
 
         {hasSelectBtn && (
-          <button
+          <input
             type="button"
-            className={classNames(styles.select_btn, isSelecting ? styles.active : '')}
+            className={classNames(
+              styles.select_btn,
+              isSelecting ? styles.active : ''
+            )}
             onClick={handleSelectBtnClick}
-          >
-            ''
-          </button>
+          />
         )}
         {hasSaveBtn && <input type="button" className={styles.save_btn} />}
         {hasLogoutBtn && <input type="button" className={styles.logout_btn} />}
