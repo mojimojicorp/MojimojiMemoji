@@ -1,28 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 import styles from './styles.scss';
 
 const MemoEditPage = () => {
+  const [isBoldActive, setIsBoldActive] = useState(false);
+  const [isItalicActive, setIsItalicActive] = useState(false);
+  const [isUnderlineActive, setIsUnderlineActive] = useState(false);
+  const [isStrikeActive, setIsStrikeActive] = useState(false);
+
+  const format = (command: string) => {
+    document.execCommand(command);
+  };
+
+  const handleMouseDown = (target: string) => {
+    if (target === 'bold') {
+      setIsBoldActive(true);
+    } else if (target === 'italic') {
+      setIsItalicActive(true);
+    } else if (target === 'underline') {
+      setIsUnderlineActive(true);
+    } else if (target === 'strikeThrough') {
+      setIsStrikeActive(true);
+    }
+  };
+
+  const handleMouseUp = (target: string) => {
+    if (target === 'bold') {
+      setIsBoldActive(false);
+    } else if (target === 'italic') {
+      setIsItalicActive(false);
+    } else if (target === 'underline') {
+      setIsUnderlineActive(false);
+    } else if (target === 'strikeThrough') {
+      setIsStrikeActive(false);
+    }
+  };
+
   return (
     <div className={styles.edit_container}>
       <Header hasSaveBtn={true} hasBackBtn={true} />
-      
+
       <div className={styles.toolbar}>
-        <div className={styles.bold} />
-        <div className={styles.italic} />
-        <div className={styles.underline} />
-        <div className={styles.removeline} />
-        <div className={styles.divider} />
-        <div className={styles.align} />
-        <div className={styles.divider} />
-        <div className={styles.link} />
-        <div className={styles.image} />
-        <div className={styles.table} />
-        <div className={styles.logo} />
-        <div className={styles.folder} />
+        <button
+          className={`${styles.bold}
+            ${isBoldActive ? styles.active : ''}
+            `}
+          onMouseDown={() => {
+            format('bold');
+            handleMouseDown('bold');
+          }}
+          onMouseUp={() => handleMouseUp('bold')}
+        />
+
+        <button
+          className={`${styles.italic} ${isItalicActive ? styles.active : ''}
+            `}
+          onMouseDown={() => {
+            format('italic');
+            handleMouseDown('italic');
+          }}
+          onMouseUp={() => handleMouseUp('italic')}
+        />
+        <button
+          className={`${styles.underline} ${
+            isUnderlineActive ? styles.active : ''
+          }`}
+          onMouseDown={() => {
+            format('underline');
+            handleMouseDown('underline');
+          }}
+          onMouseUp={() => handleMouseUp('underline')}
+        />
+        <button
+          className={`${styles.strike} ${isStrikeActive ? styles.active : ''}`}
+          onMouseDown={() => {
+            format('strikeThrough');
+            handleMouseDown('strikeThrough');
+          }}
+          onMouseUp={() => handleMouseUp('strikeThrough')}
+        />
+        <button className={styles.divider} />
+        <button className={styles.align} />
+        <button className={styles.divider} />
+        <button className={styles.link} />
+        <button className={styles.image} />
+        <button className={styles.table} />
+        <button className={styles.logo} />
+        <button className={styles.folder} />
       </div>
-      <div className={styles.edit_area} />
+      <div className={styles.edit_area} contentEditable="true" />
     </div>
   );
 };
