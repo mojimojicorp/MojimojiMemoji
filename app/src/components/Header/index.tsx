@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './styles.scss';
 
-import FolderSetting from '../FolderSetting';
 import MemoSetting from '../MemoSetting';
 
 type HeaderProps = {
@@ -48,7 +47,6 @@ const Header = ({
         {hasBackBtn && <input type="button" className={styles.back_btn} />}
       </header>
 
-      {isSelecting && hasLogoutBtn && <FolderSetting />}
       {isSelecting && hasBackBtn && <MemoSetting />}
     </>
   );

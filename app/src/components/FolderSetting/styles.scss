@@ -22,6 +22,7 @@
 
       width: 80px;
 
+      opacity: 0.3;
       cursor: pointer;
 
       .color_picker {
@@ -54,6 +55,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      opacity: 0.3;
 
       width: 80px;
 
@@ -77,6 +79,7 @@
       width: 80px;
 
       cursor: pointer;
+      opacity: 0.3;
 
       .delete_icon {
         width: 37px;
@@ -85,6 +88,10 @@
         background-image: url(../../images/icons.png);
         background-position: -178px -604px;
       }
+    }
+
+    .active {
+      opacity: 1;
     }
   }
 }

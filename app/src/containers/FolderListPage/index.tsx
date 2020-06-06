@@ -5,6 +5,7 @@ import styles from './styles.scss';
 import Header from '../../components/Header';
 import Folder from '../../components/Folder';
 import folders from '../../mock/folders';
+import FolderSetting from '../../components/FolderSetting';
 
 const cx = classnames.bind({ ...styles });
 
@@ -29,6 +30,7 @@ const FolderListPage = () => {
 
     setSelectedFolders([...selectedFolders, id]);
   };
+
   return (
     <>
       <Header
@@ -37,6 +39,13 @@ const FolderListPage = () => {
         isSelecting={isSelecting}
         setIsSelecting={setIsSelecting}
       />
+      {isSelecting && (
+        <FolderSetting
+          canColorChange={selectedFolders.length >= 1}
+          canNameChange={selectedFolders.length === 1}
+          canFolderDelete={selectedFolders.length >= 1}
+        />
+      )}
 
       <div className={styles.folder_container}>
         <div className={styles.folder_list}>
