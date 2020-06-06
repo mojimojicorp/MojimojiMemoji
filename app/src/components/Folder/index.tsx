@@ -1,9 +1,10 @@
 import React from 'react';
 
 import styles from './styles.scss';
+import colors from './colors';
 
 type FolderProps = {
-  color: string
+  color: string;
 };
 
 const Folder = (props: FolderProps) => {
@@ -11,14 +12,14 @@ const Folder = (props: FolderProps) => {
 
   return (
     <div className={styles.folder_container}>
-      <div className={styles.folder_header} style={{ backgroundColor:color }} />
-      <div className={styles.folder_body} style={{ backgroundColor:color }} />
+      <div className={styles.folder_header} style={{ backgroundColor: colors[color].head }} />
+      <div className={styles.folder_body} style={{ backgroundColor: colors[color].body }} />
     </div>
   );
 };
 
 Folder.defaultProps = {
-  color: '#ffc928'
+  color: 'yellow',
 };
 
 export default Folder;

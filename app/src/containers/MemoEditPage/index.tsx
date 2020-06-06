@@ -4,11 +4,12 @@ import Header from '../../components/Header';
 import styles from './styles.scss';
 
 const MemoEditPage = () => {
+  const [isSelecting, setIsSelecting] = useState<boolean>(false);
   const [isBoldActive, setIsBoldActive] = useState(false);
   const [isItalicActive, setIsItalicActive] = useState(false);
   const [isUnderlineActive, setIsUnderlineActive] = useState(false);
   const [isStrikeActive, setIsStrikeActive] = useState(false);
-
+  
   const format = (command: string) => {
     document.execCommand(command);
   };
@@ -39,7 +40,12 @@ const MemoEditPage = () => {
 
   return (
     <div className={styles.edit_container}>
-      <Header hasSaveBtn={true} hasBackBtn={true} />
+      <Header
+        hasSaveBtn={true}
+        hasBackBtn={true}
+        isSelecting={isSelecting}
+        setIsSelecting={setIsSelecting}
+      />
 
       <div className={styles.toolbar}>
         <button
