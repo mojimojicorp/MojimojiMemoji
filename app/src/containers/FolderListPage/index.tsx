@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 
 import styles from './styles.scss';
@@ -12,10 +12,6 @@ const cx = classnames.bind({ ...styles });
 const FolderListPage = () => {
   const [isSelecting, setIsSelecting] = useState<boolean>(false);
   const [selectedFolders, setSelectedFolders] = useState<number[]>([]);
-
-  useEffect(() => {
-    setSelectedFolders([]);
-  }, [isSelecting]);
 
   const handleFolderClick = (id: number) => {
     if (!isSelecting) return;
@@ -38,6 +34,7 @@ const FolderListPage = () => {
         hasLogoutBtn={true}
         isSelecting={isSelecting}
         setIsSelecting={setIsSelecting}
+        setSelectedFolders={setSelectedFolders}
       />
       {isSelecting && (
         <FolderSetting

@@ -11,6 +11,7 @@ type HeaderProps = {
   hasBackBtn?: boolean;
   isSelecting: boolean;
   setIsSelecting: Function;
+  setSelectedFolders?: Function;
 };
 
 const Header = ({
@@ -20,9 +21,11 @@ const Header = ({
   hasBackBtn,
   isSelecting,
   setIsSelecting,
+  setSelectedFolders,
 }: HeaderProps) => {
   const handleSelectBtnClick = () => {
     setIsSelecting(!isSelecting);
+    setSelectedFolders([]);
   };
 
   return (
