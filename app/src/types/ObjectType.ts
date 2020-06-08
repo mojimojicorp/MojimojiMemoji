@@ -1,4 +1,1 @@
-export default interface ObjectType {
-  [key: string]: any
-  [key: number]: any
-}
+export default type ObjectType = Record<string | number, any>
