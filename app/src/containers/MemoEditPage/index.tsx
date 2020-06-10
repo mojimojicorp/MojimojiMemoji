@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classnames from 'classnames/bind';
 
 import Header from '../../components/Header';
+import Tooltip from '../../components/Tooltip';
 import styles from './styles.scss';
 
 const cx = classnames.bind({ ...styles });
@@ -13,6 +14,7 @@ const MemoEditPage = () => {
   const [isUnderlineActive, setIsUnderlineActive] = useState<boolean>(false);
   const [isStrikeActive, setIsStrikeActive] = useState<boolean>(false);
   const [alignStatus, setAlignStatus] = useState<string>('left');
+  const [isLinkOpen, setIsLinkOpen] = useState<boolean>(false);
 
   const format = (command: string) => {
     document.execCommand(command);
@@ -58,6 +60,13 @@ const MemoEditPage = () => {
       edit_area.setAttribute('align', 'left');
       setAlignStatus('left');
     }
+  };
+
+  const handleLinkClick = () => {
+    // 클릭효과 (아이콘 깜빡)
+
+    // Tooltip
+    setIsLinkOpen(true);
   };
 
   return (
@@ -116,7 +125,14 @@ const MemoEditPage = () => {
 
         <input type="button" className={styles.divider} />
 
-        <input type="button" className={styles.link} />
+        <button
+          type="button"
+          className={styles.link}
+          id="link_input"
+          onClick={handleLinkClick}
+        >
+          {isLinkOpen && <Tooltip />}
+        </button>
         <input type="button" className={styles.image} />
         <input type="button" className={styles.table} />
         <input type="button" className={styles.logo} />
